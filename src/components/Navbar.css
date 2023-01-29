@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+  margin: 0.2rem 0;
+  padding: 0;
+}
+
+.navbar {
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3.5rem;
+  border-bottom: 3px dotted #38E54D;
+}
+
+.navbar-options {
+  display: flex;
+  font-size: 19px;
+  gap: 1.5rem;
+}
+
+.navbar-options label {
+	padding: 8px 8px;
+	margin-bottom: 10px;
+}
+
+.navbar-options label:hover {
+	font-weight: bold;
+	border: 1px solid black;
+	border-radius: 15px;
+	cursor: pointer;
+}
+
+
+.navbar-options label:last-child {
+	border: 1px solid #38E54D;
+	background-color: #38E54D;
+	color: white;
+	border-radius: 15px;
+}
+
+.navbar-options label:last-child:hover {
+	background-color: #38E54D;
+	color:white;
+}
+
+@media (max-width: 600px) {
+	.navbar {
+			flex-direction: column; /* cambia la dirección del contenedor */
+			align-items: center; /* centra los elementos dentro del contenedor */
+			padding-bottom: 30px;
+	}
+
+	.navbar-options {
+			flex-wrap: wrap;
+			flex-direction: column;
+	}
+
+	.navbar-options label {
+		margin: -5px;
+	}
+	
+	.navbar-options label:last-child {
+		background-color: #38E54D;
+		color: white;
+		border-radius: 15px;
+	}
+}
